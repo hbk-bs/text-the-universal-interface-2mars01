@@ -23,5 +23,3 @@ Dieses Projekt ist eine kleine Webanwendung, die humorvolle, automatisch ablaufe
 *   Automatisierter Dialog durch internen Rollentausch.
 *   Konsistente visuelle Darstellung der Sprecher trotz Rollentausch.
 *   Fokus auf unterhaltsame, leicht absurde Debatten.
-[0]: https://brightsky.dev/
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
