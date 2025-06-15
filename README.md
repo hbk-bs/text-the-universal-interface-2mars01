@@ -1,55 +1,27 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/T2g7psth)
-# Project Briefing: Text, the Universal Interface
+# KI-Debattierclub: Automatisierte Text-Debatten
 
-An exploration of what can be achieved with text and APIs using large language models.
+Dieses Projekt ist eine kleine Webanwendung, die humorvolle, automatisch ablaufende Text-Debatten zwischen einer KI und einer simulierten Gegenrolle generiert.
 
-## Your Mission
+## Funktionsweise
 
-Ideate and prototype a speculative, beautiful, useless, meaningful, intricate, text-based application/game/art work/story as a web-based project that interacts with users by feeding their input to a large language model.
-Inputs might include clicks, typed answers, video feeds, audio, uploaded images, real-time weather data[0], geolocation[1], or other sources.
+1.  **Themenauswahl:** Der Benutzer wählt aus einer Liste von (eher albernen) Debattenthemen.
+2.  **Automatischer Chat:** Sobald ein Thema gewählt ist, startet ein Chat, der in regelmäßigen Intervallen fortgesetzt wird.
+    *   Eine KI generiert Antworten.
+    *   Um einen Dialogfluss zu erzeugen, wird die Rolle für die KI-Anfrage intern nach jeder Antwort getauscht (die KI antwortet quasi auf ihre vorherige Aussage aus einer anderen Perspektive).
+    *   Die visuelle Darstellung der Chatblasen bleibt jedoch konsistent (z.B. KI immer links, initiale Anfrage immer rechts), dank einer separaten `displayRole`.
+3.  **Neues Thema:** Ein Button ermöglicht es dem Benutzer, den aktuellen Chat zu stoppen und ein neues Thema auszuwählen.
+4.  **(Geplant/Optional) Moderator:** Das System ist so vorbereitet, dass nach einer bestimmten Anzahl von Redebeiträgen ein KI-Moderator die Debatte zusammenfassen könnte.
 
-### 1. Warm-up
+## Kerntechnologien
 
+*   **Frontend:** HTML, CSS, JavaScript
+*   **KI-Interaktion:** Kommunikation mit einem externen KI-Endpunkt (z.B. via `fetch` API) zur Generierung der Debattenbeiträge.
+*   **Dynamische UI:** JavaScript manipuliert das DOM, um Themen, Chat-Nachrichten und Steuerelemente anzuzeigen.
 
-Research large language models, generate ideas, and experiment with example applications.
+## Besonderheiten
 
-- Explore how different LLM APIs (like OpenAI, Cohere, or open-source models) are used
-- Create multiple small prototypes based on different input modalities (text, image, location, etc.)
-- Collect references and inspiration from existing projects
-- Learn about prompt engineering 
-
-### 2. The Zone
-
-Build your concept. Focus on functionality and interaction before styling.
-
-- Implement the core logic of your project
-- Connect input(s) to the language models API
-- Map out and refine your data flow and user interactions
-
-### 3. Finishing Touches
-
-Polish your project. Add design, fix bugs, and test usability.
-
-- Improve visual and interaction design
-- Write help or onboarding texts for users
-- Conduct tests with friends/family and fix edge cases
-
-## Tips
-
-- Start small, iterate fast
-- Prompt engineering is the key
-- Use environment variables for your API keys if needed
-- Document your code
-- Does your prompt pass the "knock knock" test?
-
-  
-
-## Deliverables
-
-- A fully functional webpage with your prototype 
-- A README.md explaining your concept, tech stack, and how to use it
-- A LICENSE file specifying how others may use your work
-
-
+*   Automatisierter Dialog durch internen Rollentausch.
+*   Konsistente visuelle Darstellung der Sprecher trotz Rollentausch.
+*   Fokus auf unterhaltsame, leicht absurde Debatten.
 [0]: https://brightsky.dev/
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
