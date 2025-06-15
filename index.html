@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Philosophical Debate</title>
+    <title>Philosophical Debate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>A Philosophical Debate</h1>
-        <div class="chat-history"></div>
-        <div class="controls">
-            <button id="start-button" disabled>Start Debate</button>
-            <button id="reset-button" disabled>Reset</button>
+    <div class="chat-container">
+        <h1>Philosophical Debate </h1>
+
+        <div id="topicSelectionContainer">
+            <!-- Topic buttons will be rendered here by JavaScript -->
         </div>
+
+        <div class="chat-controls"> <!-- NEW container for this button -->
+            <button id="newTopicButton" style="display: none;">Choose New Topic</button>
+        </div>
+
+        <div class="chat-history" style="display: none;">
+            <!-- Messages will appear here -->
+        </div>
+        <div id="loadingIndicator" style="display:none;">thinking...</div>
     </div>
     <script src="index.js"></script>
 </body>
